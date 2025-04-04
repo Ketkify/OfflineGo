@@ -1,4 +1,3 @@
-// utils/SyncService.js
 import { getAllTransactions, markAsSynced } from './TransactionStorage';
 
 export const syncOfflineTransactions = async () => {
@@ -7,7 +6,7 @@ export const syncOfflineTransactions = async () => {
     const unsynced = transactions.filter((tx) => !tx.synced);
 
     if (unsynced.length === 0) {
-      console.log('✅ No offline transactions to sync.');
+      console.log('No offline transactions to sync.');
       return;
     }
 
@@ -20,9 +19,9 @@ export const syncOfflineTransactions = async () => {
 
       if (response.ok) {
         await markAsSynced(tx.timestamp);
-        console.log('✅ Synced:', tx);
+        console.log(' Synced:', tx);
       } else {
-        console.error('❌ Sync failed:', tx);
+        console.error(' Sync failed:', tx);
       }
     }
   } catch (err) {
