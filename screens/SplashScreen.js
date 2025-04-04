@@ -1,4 +1,3 @@
-// screens/SplashScreen.js
 import React, { useEffect } from 'react';
 import { View, Text, ActivityIndicator, StyleSheet } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -12,7 +11,7 @@ export default function SplashScreen() {
       const storedPin = await AsyncStorage.getItem('userPin');
       setTimeout(() => {
         if (storedPin) {
-          navigation.replace('MainTabs'); // NOT 'Home'
+          navigation.replace('MainTabs'); 
         } else {
           navigation.replace('PinSetup');
         }
