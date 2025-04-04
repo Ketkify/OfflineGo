@@ -1,4 +1,3 @@
-// screens/PayScreen.js
 import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, Button, Alert, TouchableOpacity } from 'react-native';
 import { BarCodeScanner } from 'expo-barcode-scanner';
