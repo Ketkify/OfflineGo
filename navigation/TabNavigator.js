@@ -1,4 +1,3 @@
-// navigation/TabNavigator.js
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
@@ -44,8 +43,6 @@ export default function TabNavigator() {
         },
         tabBarActiveTintColor: '#007bff',
         tabBarInactiveTintColor: 'gray',
-
-        // 👇 Your requested tabBarOptions styles (modern way)
         tabBarStyle: {
           backgroundColor: '#fff',
           borderTopWidth: 0,
@@ -66,3 +63,4 @@ export default function TabNavigator() {
     </Tab.Navigator>
   );
 }
+
