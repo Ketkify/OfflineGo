@@ -3,7 +3,6 @@ const User = require('../models/User');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
-// ✅ 1. Send OTP (no user existence check here)
 const sendOtp = async () => {
     if (!form.phone) return Alert.alert('Error', 'Enter your phone number');
   
@@ -28,7 +27,6 @@ const sendOtp = async () => {
   };
   
 
-// ✅ 2. Verify OTP and Register (checks all unique fields)
 const verifyOtp = async (req, res) => {
   const { fullName, username, phone, email, password, otp } = req.body;
 
@@ -82,7 +80,6 @@ const verifyOtp = async (req, res) => {
   }
 };
 
-// ✅ 3. Login
 const login = async (req, res) => {
   const { username, password } = req.body;
 
